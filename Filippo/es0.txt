@@ -1,0 +1,3 @@
+Quando ci da esercizio creamo un branches per convenzione mettiamo il mio nome-che cosa fa quel branch es:
+creamo cartella Principale FILIPPO e creamo un branches per ogni esercizio
+
