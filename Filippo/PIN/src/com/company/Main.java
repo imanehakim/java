@@ -30,19 +30,19 @@ public class Main {
             codifica[j]=x[pin[j]];
         }
         System.out.println();
-
+	//utente inserisce codifica pin
         for(int i=0;i<pin.length;i++){
             System.out.print("Inserisci cifra "+(i+1)+" del pin");
             y[i]= tastiera.nextInt();
         }
 
-
+	//stampacodifica corretta solo per varificare che sia effettivamente corretta
         System.out.println();
         for(int i=0;i<pin.length;i++){
             System.out.print(codifica[i]);
         }
         System.out.println();
-
+	//confronta array inserito con array codifica corretta tramite funzione
         boolean verifica1=uguale(y,codifica);
         if (verifica1){
             System.out.print("Il pin è corretto");
