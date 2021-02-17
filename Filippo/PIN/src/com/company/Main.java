@@ -22,7 +22,7 @@ public class Main {
         System.out.println();
         //inizializzo array random con cifre da 0 a 3
         for(int i=0;i<x.length;i++){
-            x[i]=(int) (Math.random() * 3);
+            x[i]=(int) (Math.random() * 3)+1;
             System.out.print(x[i]);
         }
         //inizializzo array con codifica corretta
