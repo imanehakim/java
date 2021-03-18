@@ -6,7 +6,7 @@ public class Main {
         List l = new Node(1,new Node(2,new Node(3,new Nil())));
 
         l = l.add(4,1);
-        System.out.println(l);//da cancellare
+
        System.out.println(l.countOdd()); // questo dovrebbe stampare 2
 
         System.out.println("Inverti l'array");

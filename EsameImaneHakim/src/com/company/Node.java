@@ -42,16 +42,17 @@ public class Node extends List {
             return next.countOdd();
     }
 
-   @Override
+
+    @Override
     public List doubleValue() {
-        this.value=(this.value)*2;
-        next.doubleValue();
-        return this;
+        int doppio = this.value * 2;
+        List listaDoppia = this.next.doubleValue();
+        return new Node(doppio, listaDoppia);
     }
 
  @Override
     public boolean equals(Object obj) {
-        if(this.value != ((Node)obj).getValue()) {
+        if(this.value == ((Node)obj).getValue()) {
             return this.next.equals(((Node) obj).getNext());
         }
         else
