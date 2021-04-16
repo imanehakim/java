@@ -145,31 +145,31 @@ public class GameBoard extends JPanel implements KeyListener{
         g.setColor(Color.WHITE);
 
         g.setFont(new Font("Georgia", Font.BOLD, 20));
-        g.drawString("SCORE", Main.WIDTH - 125, Main.HEIGHT -100);
-        g.drawString(score + "", Main.WIDTH - 125, Main.HEIGHT-80);
+        g.drawString("SCORE", Main.WIDTH - 190, Main.HEIGHT -100);
+        g.drawString(score + "", Main.WIDTH - 190, Main.HEIGHT-80);
 
-        g.drawString("Istruzioni", Main.WIDTH - 130, Main.HEIGHT / 3);
+        g.drawString("Istruzioni", Main.WIDTH - 190, Main.HEIGHT / 3);
+
         g.setFont(new Font("Georgia", Font.ITALIC, 10));
 
+        g.drawString( "p= pausa;", Main.WIDTH - 190, Main.HEIGHT / 3 + 30);
 
-        g.drawString( "p=pausa;", Main.WIDTH - 125, Main.HEIGHT / 3 + 20);
-        g.drawString( "space bar=riprendi", Main.WIDTH - 125, Main.HEIGHT / 3 + 50);
+        g.drawString( "space bar= riprendi", Main.WIDTH - 190, Main.HEIGHT / 3 + 60);
 
-        g.drawString( " freccia destra=", Main.WIDTH - 125, Main.HEIGHT / 3 + 80);
-        g.drawString( " muove a destra", Main.WIDTH - 125, Main.HEIGHT / 3 + 100);
-
-        g.drawString( " freccia sinistra=", Main.WIDTH - 125, Main.HEIGHT / 3 + 130);
-        g.drawString( " muove a sinistra", Main.WIDTH - 125, Main.HEIGHT / 3 + 150);
-
-        g.drawString( " freccia in basso=", Main.WIDTH - 125, Main.HEIGHT / 3 + 180);
-        g.drawString( " muove velocemente", Main.WIDTH - 125, Main.HEIGHT / 3 + 200);
-
-        g.drawString( " freccia in alta=", Main.WIDTH - 125, Main.HEIGHT / 3 + 230);
-        g.drawString( " ruota", Main.WIDTH - 125, Main.HEIGHT / 3 + 250);
+        g.drawString( " freccia destra= muove a destra", Main.WIDTH -190, Main.HEIGHT / 3 + 90);
 
 
+        g.drawString( " freccia sinistra= muove a sinistra", Main.WIDTH - 190, Main.HEIGHT / 3 + 120);
 
-        g.setColor(Color.WHITE);
+
+        g.drawString( " freccia in basso= veloce", Main.WIDTH - 190, Main.HEIGHT / 3 + 150);
+
+
+        g.drawString( " freccia in alto= ruota", Main.WIDTH - 190  , Main.HEIGHT / 3 + 180);
+
+        g.drawString( " invio= restart game", Main.WIDTH - 190  , Main.HEIGHT / 3 + 210);
+
+
 
         for (int i = 0; i <= boardHeight; i++) {
             g.drawLine(0, i * squareSize, boardWidth * squareSize, i * squareSize);

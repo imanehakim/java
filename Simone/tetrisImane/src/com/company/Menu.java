@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
 
 
 import javax.swing.JPanel;
@@ -18,10 +19,11 @@ public class Menu extends JPanel implements KeyListener {
     private Main window;
 
     private Timer timer;
-
+    private BufferedImage startBoard;
 
     public Menu(Main window){
 
+        startBoard = ImageMenu.loadImage("/menu.png");
         timer = new Timer(1000/60, new ActionListener(){
 
             @Override
@@ -41,15 +43,15 @@ public class Menu extends JPanel implements KeyListener {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
-        g.setColor(Color.CYAN);
+        g.setColor(Color.BLACK);
 
         g.fillRect(0, 0, Main.WIDTH, Main.HEIGHT);
 
         g.setColor(Color.BLACK);
 
-        g.drawString("Imane's tetris!", 150, Main.HEIGHT /2 -100);
+        g.drawImage(startBoard, 70, 100, null);
 
-        g.drawString("Premi invio per iniziare!", 150, Main.HEIGHT / 2 + 100);
+
 
 
     }
