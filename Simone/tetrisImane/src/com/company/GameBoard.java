@@ -15,6 +15,8 @@ import javax.swing.Timer;
 
 public class GameBoard extends JPanel implements KeyListener{
 
+    private static final long serialVersionUID = 1L;
+
     // la dimensione dell'area da gioco
     private final int boardHeight = 20, boardWidth = 10;
 
@@ -31,7 +33,7 @@ public class GameBoard extends JPanel implements KeyListener{
     private static TetraminoShape currentTetraminoShape, nextTetraminoShape;
 
     // tempo di gioco di gioco
-    private Timer looper;
+    private Timer timer;
 
 
     private int delay = 1000/60;
@@ -54,8 +56,8 @@ public class GameBoard extends JPanel implements KeyListener{
 
 
 
-        // create game looper
-        looper = new Timer(delay, new GameLooper());
+        // crea game timer
+        timer = new Timer(delay, new GameTimer());
 
         // istanziamento tetramini
         tetraminoShapes[0] = new TetraminoShape(new int[][]{
@@ -245,7 +247,7 @@ public class GameBoard extends JPanel implements KeyListener{
         setNextShape();
         setCurrentShape();
         gameOver = false;
-        looper.start();
+        timer.start();
 
     }
 
@@ -257,10 +259,10 @@ public class GameBoard extends JPanel implements KeyListener{
                 board[row][col] = null;
             }
         }
-        looper.stop();
+        timer.stop();
     }
 
-    class GameLooper implements ActionListener {
+    class GameTimer implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
