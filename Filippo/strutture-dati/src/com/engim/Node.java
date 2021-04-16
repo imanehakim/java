@@ -60,7 +60,9 @@ public class Node extends List{
 
     @Override
     public List doppio() {
-        return null;
+        this.next=next.doppio();
+        this.next=
+        return this;
     }
 
     @Override

@@ -25,7 +25,8 @@ public class Main {
         System.out.println(l);
         l.removeAtIndex(2);
         System.out.println(l);
-
+        l.doppio();
+        System.out.println(l);
 
 
     }

@@ -33,7 +33,7 @@ public class Nil extends List{
 
     @Override
     public List doppio() {
-        return null;
+        return this;
     }
 
     @Override
